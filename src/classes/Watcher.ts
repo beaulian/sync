@@ -17,7 +17,7 @@ export default class Watcher {
         private base: string = config.localPath
     ) {
 
-        let defaultIgnores: Array<string | RegExp> = [/node_modules/, /.git/, /.svn/, /bower_components/, /.vs/, /.vscode/, /build/, /out/];
+        let defaultIgnores: Array<string | RegExp> = [/node_modules/, /.git/, /.svn/, /.vs/, /.vscode/, /bower_components/];
 
         this.files = chokidar.watch(base, {
             ignored: defaultIgnores.concat(this.config.ignores),
